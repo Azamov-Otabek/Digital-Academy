@@ -1,0 +1,112 @@
+.intro-wrapper{
+    width: 100%;
+    height: 500px;
+    position: relative;
+
+    .intro-video{
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .intro-body{
+        position: relative;
+        z-index: 99;
+        background: black;
+        width: 100%;
+        height: 450px;
+        background: #075ab28b;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 120px;
+
+        .intro-left{
+            width: 100%;
+            max-width: 600px;
+            color: white;  
+
+            h1{
+                line-height: 40px;
+            }
+            
+            p{
+                font-size: 14px;
+                line-height: 32px;
+                margin-bottom: 10px;
+            }
+
+            button{
+                padding: 20px 20px;
+                background: #093D7A ;
+                color: white;
+                font-size: 16px;
+                border: 1px solid #093D7A;
+                &:hover{
+                    background: #265ba5 !important;
+                    color: white;
+                    transition: all 0.2s linear;
+                }
+            }
+        }
+
+        .intro-right{
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+}
+
+  
+@media screen and (max-width: 1240px){
+
+    .intro-body{
+        padding: 0 40px !important; 
+    }
+
+    .intro-left{
+        max-width: 400px !important;
+        
+        h1{
+            font-size: 30px;
+        }
+    }
+
+    .intro-right{
+        max-width: 400px !important;
+        transition: all 0.2s linear;
+    }
+}
+
+@media screen and (max-width: 840px){
+    .intro-body{
+        padding: 0 15px !important;
+    }
+
+    .intro-left{
+        h1{
+            font-size: 30px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 780px){
+    .intro-right{
+        display: none;
+    }
+
+    .intro-left{
+        margin: 0 auto;
+        text-align: center;
+
+        h1{
+            font-size: 25px;
+        }
+    }
+}

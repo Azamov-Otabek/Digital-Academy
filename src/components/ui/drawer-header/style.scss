@@ -1,0 +1,32 @@
+.driwer{
+    display: none;
+}
+
+
+@media screen and (max-width: 1220px){
+    .driwer{
+        display: block;
+    }
+
+    .drawer{
+        text-align: center;  
+    }
+
+    .drawer{
+        background: #093D7A !important;
+        
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            align-items: center;
+
+            li{
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+}

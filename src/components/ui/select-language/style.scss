@@ -1,0 +1,16 @@
+.custom-option{
+    position: relative;
+    padding-left: 33px !important;
+
+    img{
+        position: absolute;
+        left: 5px;
+    }
+}
+
+.ant-select {  
+    .ant-select-selector .ant-select-selection-item {
+      display: flex;
+      align-items: center;
+    }
+  }

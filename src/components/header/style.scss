@@ -1,0 +1,48 @@
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #000046;  
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046); 
+    background: linear-gradient(to left, #1CB5E0, #000046);
+    z-index: 999;
+
+
+    nav{
+        padding: 0 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            width: 100px;
+            height: 100px;
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            li{
+                width: auto;
+                a{
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1220px){
+    nav{
+        padding: 0 15px !important;
+        transition: all 0.4s linear !important;
+        ul{
+            display: none !important;
+        }
+    }
+}
+

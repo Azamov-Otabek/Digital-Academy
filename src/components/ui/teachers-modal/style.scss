@@ -1,0 +1,41 @@
+.teacher-btn{
+    display: none;
+}
+
+
+@media screen and (max-width: 826px){
+    .teacher-btn{
+        display: block;
+        width: 50%;
+        background: #093D7A ;
+
+        &:hover{
+            background: #265ba5 !important;
+            color: white;
+            transition: all 0.2s linear;
+        }
+    }
+
+    .modal-teacher{
+        text-align: center;
+
+        p{
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        h2{
+            margin-bottom: 10px;
+        }
+
+        ul{
+            li{
+                
+                display: flex;
+                gap: 5px;
+                justify-content: center;
+                font-weight: 600;
+            }
+        }
+    }
+}
