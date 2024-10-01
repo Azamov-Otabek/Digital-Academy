@@ -1,12 +1,11 @@
 import Container from '../container';
 import Dispecher from '../../assets/videos/dispetcher.mp4';
 import './style.scss';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Button, Form, Input } from 'antd';
 import FormItem from 'antd/es/form/FormItem';
 
 function Operators() {
-  const [phone, setPhone] = useState('+998 ');
 
   useEffect(() => {
     const video:any = document.querySelector(".intro-video");

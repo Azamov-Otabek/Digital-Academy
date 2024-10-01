@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './style.scss'
-import { Button, Modal } from 'antd';
+import { Modal } from 'antd';
 
 
 
