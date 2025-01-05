@@ -7,6 +7,7 @@ import { Button } from "antd";
 import Typewriter from 'typewriter-effect';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 
 function Intro() {
@@ -18,6 +19,8 @@ function Intro() {
       });
     }
   }, []);
+  
+  const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init({ duration: 1000 }); 
@@ -41,7 +44,7 @@ function Intro() {
               <h1>
                 <Typewriter
                   options={{
-                    strings: ['KELAJAK HOZIR VA SHU YERDAN BOSHLANADI.', "Hoziroq ro'yhatdan o'ting.", "Web Dasturlash, Kompyuter savodhonligi, Backend Dasturlash"],
+                    strings: [t("intro_slide_1"), t("intro_slide_2"), t("intro_slide_3")],
                     autoStart: true,
                     loop: true,
                     delay: 75,
@@ -50,10 +53,9 @@ function Intro() {
                 />
               </h1>
               <p>
-                O'zingizga qulay vaqtda, joyda va uslubda zamonaviy kasblarni
-                o'rganing.
+                {t('intro_description')}
               </p >
-              <Button>Kurslarni ko'rish</Button>
+              <a href="#kurslar"><Button>{t('intro_btn')}</Button></a>
             </div>
             <img data-aos="fade-left" className="intro-right" src={LOGO} alt="" />
           </div>

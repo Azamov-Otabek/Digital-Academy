@@ -5,9 +5,11 @@ import { CheckCircleOutlined, DingtalkOutlined, StarOutlined } from "@ant-design
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from "react-i18next";
 
 
 function index() {
+  const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init({ duration: 1200 }); 
@@ -17,20 +19,16 @@ function index() {
     <div id="about">
       <Container>
         <div className="about-wrapper">
-          <h1 className="title">Biz haqimizda</h1>
+          <h1 className="title">{t("about_title")}</h1>
           <div className="about-body">
             <div className="about-card"  data-aos="fade-right" >
               <div className="card-left">
                 <img src={StarIcon} alt="Star Icon" />
               </div>
               <div className="card-right">
-                <h2>Onlayn akademiya</h2>
+                <h2>{t('card1_title')}</h2>
                 <p>
-                  «Digital Academy» - bu zamonaviy kasblar o‘qitiladigan offline
-                  akademiya. Qayerda bo‘lishingizdan qat’i nazar: uydami yo
-                  mehmonda, daladami yo safarda — o‘zingizga qulay tarzda va
-                  vaqtda bilim olishingiz mumkin, internet va noutbuk bo‘lsa
-                  bas.
+                  {t('card1_description')}
                 </p>
               </div>
             </div>
@@ -40,11 +38,9 @@ function index() {
                 <StarOutlined />
               </div>
               <div className="card-right">
-                <h2>O‘z ishining ustalari</h2>
+              <h2>{t('card2_title')}</h2>
                 <p>
-                  Darslar katta tajribaga ega malakali mutaxassislar tomonidan
-                  tayyorlangan. O‘z ishining ustalaridan yanada ishonchli bilim
-                  va tajribaga ega bo’lasiz
+                  {t('card2_description')}
                 </p>
               </div>
             </div>
@@ -54,11 +50,9 @@ function index() {
                 <CheckCircleOutlined />
               </div>
               <div className="card-right">
-                <h2>Digital Academy</h2>
+              <h2>{t('card3_title')}</h2>
                 <p>
-                  Sirdaryo viloyati bo'yicha barcha o'quv markazlari ichra TOP-1
-                  o'rinda joylashgan. Bitiruvchilarimiz soni 1500 nafardan oshiq
-                  va ularning 90% o'zlarining daromad yo'llarini topishgan.
+                  {t('card3_description')}
                 </p>
               </div>
             </div>
@@ -68,15 +62,9 @@ function index() {
               <DingtalkOutlined />
               </div>
               <div className="card-right">
-                <h2>Bo'lib to'lash imkoniyati</h2>
+              <h2>{t('card4_title')}</h2>
                 <p>
-                  Endi siz oldin o'qib, keyin to'lashingiz mumkin.
-                  To'lovlarni bo'lib to'lash imkoniyati sizga malakali ta'limdan
-                  bahramand bo'lishingizni va moliyaviy yukni
-                  engillashtirishingizni ta'minlaydi. Har bir talabaga
-                  individual yondashib, sizning ehtiyojlaringiz va
-                  imkoniyatlaringizni hisobga olib, moslashtirilgan yechimlar
-                  taklif etamiz.
+                  {t('card4_description')}
                 </p>
               </div>
             </div>

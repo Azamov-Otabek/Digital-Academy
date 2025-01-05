@@ -4,6 +4,7 @@ import './style.scss';
 import { useEffect } from 'react';
 import { Button, Form, Input } from 'antd';
 import FormItem from 'antd/es/form/FormItem';
+import { useTranslation } from 'react-i18next';
 
 function Operators() {
 
@@ -15,38 +16,39 @@ function Operators() {
       });
     }
   }, []);
+  const { t } = useTranslation();
 
   return (
     <div id='contacts'>
       <Container>
         <div className='call-wrapper'>
           <div className="call-left">
-            <video className='intro-video' autoPlay={true} muted loop={true} src={Dispecher}></video>
+            <video className='intro-operator-video' autoPlay={true} muted loop={true} src={Dispecher}></video>
           </div>
           <div className="call-right">
-            <h2>Digital Academy</h2>
-            <h3>Sirdaryo viloyati barcha tuman va shaharlarda.</h3>
-            <h3>Qulay paytni poylamang, hoziroq kafolatni kelajagingiz sari ishonli qadamlarni tashlang!</h3>
+            <h2>{t('operator_title')}</h2>
+            <h3>{t('operator_description_1')}</h3>
+            <h3>{t('operator_description_2')}</h3>
 
             <Form className='call-operator'>
-              <p>Ismingizni kiriting</p>
+              <p>{t('operator_input')}</p>
               <FormItem name='name' rules={[{
                 required: true,
-                message: 'Ismingizni kiriting!',
+                message: `${t("input_validation")}`,
               }]}>
-                <Input  placeholder='Ismizni kiriting'/>
+                <Input  placeholder={`${t("operator_input")}`}/>
               </FormItem>
 
-              <p>Telefon raqamingizni kiriting</p>
+              <p>{t('operator_number')}</p>
               <FormItem name="phone_number" rules={[{
                 required: true,
-                message: 'Telefon raqamingizni kiriting!',
+                message: `${t("number_validation1")}`,
               },
               {
                 pattern: /^\+998[0-9]{9}$/,
-                message: "Raqamingizni to'g'ri formatda kiriting! (+998)"
+                message: `${t("number_validation2")}`
               }]}>
-                <Input typeof='number' placeholder='Telefon raqamingizni kiriting'/>
+                <Input typeof='number' placeholder={`${t("operator_number")}`}/>
               </FormItem>
               
               <Button htmlType='submit'>So'rov yuborish</Button>

@@ -76,3 +76,14 @@
         }
     }
 }
+
+
+@media screen and (max-width: 850px){
+    .call-left{
+        display: none;
+    }
+
+    .call-wrapper{
+        padding: 15px;
+    }
+}

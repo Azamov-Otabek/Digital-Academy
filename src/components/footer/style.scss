@@ -7,6 +7,7 @@ footer{
     align-items: start;
     justify-content: center;
     gap: 100px;
+    flex-wrap: wrap;
 
     .footer-left{
         p{
@@ -35,6 +36,8 @@ footer{
     }
 
     .footer-right{
+        gap: 10px;
+        max-width: 600px;
         div{
            a{
             display: flex;
@@ -46,9 +49,16 @@ footer{
         }
 
         iframe{
-            max-width: 600px !important;
+            max-width: 100% !important;
             height: 300px;
             border: no;
         }
+    }
+}
+
+
+@media screen and (max-width: 1048px){
+    .footer-wrapper{
+        gap: 30px;
     }
 }
