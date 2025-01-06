@@ -5,6 +5,7 @@ import headerTranslations from './components/header/header.i18n'
 import IntroTranslation from './components/intro/intro.i18n'
 import AboutTranslations from './components/about/about.18n'
 import OperatorTranslations from './components/operators/operators.i18n'
+import FooterTranslations from './components/footer/footer.i18n'
 
 
 const resources = {
@@ -14,6 +15,7 @@ const resources = {
         ...IntroTranslation.en,
         ...AboutTranslations.en,
         ...OperatorTranslations.en,
+        ...FooterTranslations.en,
     } },
     uz: { translation: {
         ...SelectLanguageTranslations.uz,
@@ -21,6 +23,7 @@ const resources = {
         ...IntroTranslation.uz,
         ...AboutTranslations.uz,
         ...OperatorTranslations.uz,
+        ...FooterTranslations.uz,
     } },
     ru: { translation: {
         ...SelectLanguageTranslations.ru,
@@ -28,6 +31,7 @@ const resources = {
         ...IntroTranslation.ru,
         ...AboutTranslations.ru,
         ...OperatorTranslations.ru,
+        ...FooterTranslations.ru,
     } },
 };
 

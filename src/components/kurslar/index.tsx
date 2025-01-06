@@ -1,5 +1,6 @@
 import Container from '../container'
 import { KursCard } from '../ui'
+import { courses } from '../../data/courses'
 import './style.scss'
 
 
@@ -10,7 +11,7 @@ function index() {
             <h1 className='title'>Bizning kurslar</h1>
               <div className="kurs-wrapper">
                   {
-                    Array.from({ length: 4 }, (_, i) => i + 1).map(i => <KursCard key={i} />)
+                   courses.map((e, i) => <KursCard key={i} data={e}/>)
                   }
               </div>
         </Container>

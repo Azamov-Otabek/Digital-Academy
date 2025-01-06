@@ -1,22 +1,24 @@
 import Container from '../container'
 import './style.scss'
+import { useTranslation } from 'react-i18next'
 
 
 function Footer() {
+  const { t } = useTranslation();
   return (
     <footer id='footer'>
         <Container>
             <div className='footer-wrapper'>
                 <div className="footer-left">
-                    <p>Bizni ijtimoiy tarmoqlarda kuzatib boring</p>
+                    <p>{t("footer_name")}</p>
                     <div>
-                      <a href="#"><i className='bx bxl-telegram' style={{color: 'blue'}}></i></a>
-                      <a href="#"> <i className='bx bxl-youtube' style={{color: 'red'}} ></i></a>  
-                      <a href="#"> <i className='bx bxl-instagram-alt'  ></i></a>
+                      <a target='_blank' href="https://t.me/digital_academy_sirdaryo"><i className='bx bxl-telegram' style={{color: 'blue'}}></i></a>
+                      {/* <a target='_blank' href="#"> <i className='bx bxl-youtube' style={{color: 'red'}} ></i></a>   */}
+                      <a target='_blank' href="https://www.instagram.com/digital.academy.sirdaryo/"> <i className='bx bxl-instagram-alt'  ></i></a>
                     </div>
                     
-                    <p style={{textAlign: 'center', marginBottom: 20, marginTop: 30}}>Biz bilan bog'lanish:</p>
-                    <h5 style={{textAlign: 'center'}}>+998 (99) 999 - 99 - 99</h5>
+                    <p style={{textAlign: 'center', marginBottom: 20, marginTop: 30}}>{t("footer_contact")}</p>
+                    <h5 style={{textAlign: 'center'}}>+998 (94) 124 - 24 - 44</h5>
                 </div>
                 <div className="footer-right">
                   

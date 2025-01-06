@@ -13,6 +13,7 @@ import Rasm from "../../assets/images/rasm.png";
 import { useEffect } from "react";
 import { PhoneOutlined } from "@ant-design/icons";
 import { TeacherModal } from "@ui";
+import { teachers } from "../../data/teachers";
 
 export default function App() {
   const pagination = {
@@ -43,157 +44,39 @@ export default function App() {
               className="mySwiper"
               
             >
-              <SwiperSlide>
-                <div className="swiper-left">
-                  <div data-aos="fade-left" className="swiper-body">
-                    <h1>A'zamov Otabek</h1>
-                    <h2>Frontend | Web Dasturchi</h2>
-                    <p>
-                      Men 3 yildan ortiq tajribaga ega Frontend dasturchisiman,
-                      asosan React.js bilan ishlashda mutaxassisman. Mening
-                      tajribam veb-dasturlashning barcha jihatlarini qamrab
-                      oladi, shu jumladan, yuqori darajadagi foydalanuvchi
-                      interfeyslarini yaratish, samarali kod yozish va kompleks
-                      muammolarni hal qilish.
-                    </p>
-                    <p>
-                      React.js bilan ishlashda men komponentlar arxitekturasi,
-                      holatni boshqarish (state management), va performansni
-                      optimallashtirish kabi sohalarda chuqur bilimga egaman.
-                      Ushbu texnologiyalar yordamida zamonaviy, tezkor va
-                      intuitiv interfeyslarni yaratishga qodirman.
-                    </p>
-                    <ul>
-                      <li>
-                          <PhoneOutlined/>
-                         +998 (99) 930 - 52 - 10
-                      </li>
+              {
+                teachers?.map((e, i )=> {
+                  return  (
+                    <SwiperSlide key={i}>
+                      <div className="swiper-left">
+                        <div data-aos="fade-left" className="swiper-body">
+                          <h1>{e.name}</h1>
+                          <h2>{e.position}</h2>
+                          <p>
+                            {e.description}
+                          </p>
+                          <p>
+                          {e.description2}
+                          </p>
+                          <ul>
+                            <li>
+                                <PhoneOutlined/>
+                                +998 (99) 999-99-99
+                            </li>
 
-                    </ul>
-                  </div>
+                          </ul>
+                        </div>
 
-                  <div data-aos="fade-right" className="swiper-img">
-                    <img src={Rasm} alt="rasm" />
-                  </div>
+                        <div data-aos="fade-right" className="swiper-img">
+                          <img src={Rasm} alt="rasm" />
+                        </div>
 
-                  <TeacherModal/>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="swiper-left">
-                  
-
-                  <div data-aos="fade-right" className="swiper-img">
-                    <img src={Rasm} alt="rasm" />
-                  </div>
-
-                  <div data-aos="fade-left" className="swiper-body">
-                    <h1>A'zamov Otabek</h1>
-                    <h2>Frontend | Web Dasturchi</h2>
-                    <p>
-                      Men 3 yildan ortiq tajribaga ega Frontend dasturchisiman,
-                      asosan React.js bilan ishlashda mutaxassisman. Mening
-                      tajribam veb-dasturlashning barcha jihatlarini qamrab
-                      oladi, shu jumladan, yuqori darajadagi foydalanuvchi
-                      interfeyslarini yaratish, samarali kod yozish va kompleks
-                      muammolarni hal qilish.
-                    </p>
-                    <p>
-                      React.js bilan ishlashda men komponentlar arxitekturasi,
-                      holatni boshqarish (state management), va performansni
-                      optimallashtirish kabi sohalarda chuqur bilimga egaman.
-                      Ushbu texnologiyalar yordamida zamonaviy, tezkor va
-                      intuitiv interfeyslarni yaratishga qodirman.
-                    </p>
-                    <ul>
-                      <li>
-                          <PhoneOutlined/>
-                         +998 (99) 930 - 52 - 10
-                      </li>
-
-                    </ul>
-                  </div>
-
-                  <TeacherModal/>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="swiper-left">
-                  <div data-aos="fade-left" className="swiper-body">
-                    <h1>A'zamov Otabek</h1>
-                    <h2>Frontend | Web Dasturchi</h2>
-                    <p>
-                      Men 3 yildan ortiq tajribaga ega Frontend dasturchisiman,
-                      asosan React.js bilan ishlashda mutaxassisman. Mening
-                      tajribam veb-dasturlashning barcha jihatlarini qamrab
-                      oladi, shu jumladan, yuqori darajadagi foydalanuvchi
-                      interfeyslarini yaratish, samarali kod yozish va kompleks
-                      muammolarni hal qilish.
-                    </p>
-                    <p>
-                      React.js bilan ishlashda men komponentlar arxitekturasi,
-                      holatni boshqarish (state management), va performansni
-                      optimallashtirish kabi sohalarda chuqur bilimga egaman.
-                      Ushbu texnologiyalar yordamida zamonaviy, tezkor va
-                      intuitiv interfeyslarni yaratishga qodirman.
-                    </p>
-                    <ul>
-                      <li>
-                          <PhoneOutlined/>
-                         +998 (99) 930 - 52 - 10
-                      </li>
-
-                    </ul>
-                  </div>
-
-                  <div data-aos="fade-right" className="swiper-img">
-                    <img src={Rasm} alt="rasm" />
-                  </div>
-
-                  <TeacherModal/>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="swiper-left">
-                  
-
-                  <div data-aos="fade-right" className="swiper-img">
-                    <img src={Rasm} alt="rasm" />
-                  </div>
-
-                  <div data-aos="fade-left" className="swiper-body">
-                    <h1>A'zamov Otabek</h1>
-                    <h2>Frontend | Web Dasturchi</h2>
-                    <p>
-                      Men 3 yildan ortiq tajribaga ega Frontend dasturchisiman,
-                      asosan React.js bilan ishlashda mutaxassisman. Mening
-                      tajribam veb-dasturlashning barcha jihatlarini qamrab
-                      oladi, shu jumladan, yuqori darajadagi foydalanuvchi
-                      interfeyslarini yaratish, samarali kod yozish va kompleks
-                      muammolarni hal qilish.
-                    </p>
-                    <p>
-                      React.js bilan ishlashda men komponentlar arxitekturasi,
-                      holatni boshqarish (state management), va performansni
-                      optimallashtirish kabi sohalarda chuqur bilimga egaman.
-                      Ushbu texnologiyalar yordamida zamonaviy, tezkor va
-                      intuitiv interfeyslarni yaratishga qodirman.
-                    </p>
-                    <ul>
-                      <li>
-                          <PhoneOutlined/>
-                         +998 (99) 930 - 52 - 10
-                      </li>
-
-                    </ul>
-                  </div>
-
-                  <TeacherModal/>
-                </div>
-              </SwiperSlide>
+                        <TeacherModal/>
+                      </div>
+                    </SwiperSlide>
+                  )
+                })
+              }
 
 
             </Swiper>
