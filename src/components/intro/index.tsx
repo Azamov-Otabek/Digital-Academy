@@ -35,8 +35,6 @@ function Intro() {
             autoPlay
             loop
             muted
-            disablePictureInPicture
-            disableRemotePlayback
             className="intro-video"
             src={Intro_Video}
           ></video>

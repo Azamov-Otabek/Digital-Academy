@@ -10,9 +10,6 @@
     scroll-behavior:smooth;
 }
 
-body{
-    overflow-x: hidden;
-}
 
 main{
     margin-top: 100px;
