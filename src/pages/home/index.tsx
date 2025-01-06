@@ -1,4 +1,4 @@
-import { About, Intro, Kurs, Operators, Services, Swiper } from "@components"
+import { About, Intro, Kurs, Reklam, Operators, Services, Swiper } from "@components"
 
 function Home() {
   return (
@@ -7,6 +7,7 @@ function Home() {
       <About/>
       <Swiper/>
       <Kurs/>
+      <Reklam/>
       <Services/>
       <Operators/>
     </>

@@ -7,5 +7,6 @@ import Swiper from './swiper'
 import Kurs from './kurslar'
 import Services from "./services";
 import Operators from "./operators";
+import Reklam from './reklam'
 
-export { Header, Footer, Container, Intro, About, Swiper, Kurs, Services, Operators };
+export { Header, Footer, Container, Intro, About, Swiper, Kurs, Services, Operators, Reklam };
