@@ -1,71 +1,65 @@
+# Digital Academy
+
+Адаптивный многоязычный сайт учебного центра. Проект представляет направления обучения, преподавателей и контактную информацию в удобном формате для desktop и mobile.
+
+[Live Demo](https://digital-academy-nine.vercel.app/) · [Repository](https://github.com/Azamov-Otabek/Digital-Academy)
+
+## Возможности
+
+- переключение интерфейса между узбекским, русским и английским языками;
+- адаптивная навигация с мобильным drawer;
+- интерактивные слайдеры и карточки направлений;
+- секции с преподавателями, услугами и информацией о центре;
+- видео-контент и встроенная Google-карта;
+- анимации появления элементов;
+- компонентная структура и переиспользуемые UI-компоненты.
+
+## Технологии
+
+- React 18
+- TypeScript
+- React Router
+- SCSS
+- i18next / react-i18next
+- Swiper
+- Ant Design
+- AOS
+- Vite
+
+## Запуск локально
+
+```bash
+git clone https://github.com/Azamov-Otabek/Digital-Academy.git
+cd Digital-Academy
+npm install
+npm run dev
 ```
-  
+
+После запуска Vite покажет локальный адрес приложения в терминале.
+
+## Проверка production-сборки
+
+```bash
+npm run build
+npm run preview
 ```
 
+## Скриншоты
 
-Teachers = [
-  post: {
-    full_name => "String",
-    job => "String",
-    about => "String",
-    img => "String",
-    => post_request MultipartForm Data
-  },
-  get: {
-    full_name => "String",
-    job => "String",
-    about => "String",
-    img => "String",
-    id: "String",
-  }
-  update: {
-    id => "String",
+Скриншоты интерфейса пока не добавлены в репозиторий. Для полного оформления рекомендуется добавить desktop- и mobile-версии в `docs/screenshots/` и разместить их в этом разделе.
 
-    object: {
-      full_name => "String",
-      job => "String",
-      about => "String",
-      img => "String",
-    }
-  },
-  delete: {
-    id => "String",
-  }
-],
+## Структура проекта
 
+```text
+src/
+├── components/   # секции и переиспользуемые UI-компоненты
+├── data/         # данные курсов и преподавателей
+├── pages/        # страницы приложения
+├── router/       # маршрутизация
+├── assets/       # изображения, иконки и видео
+└── i18n.js       # настройка локализации
+```
 
-Kurslar = [
-    post: {
-      title => "String",
-      description => "String",
-      full_description => "String",
-    },
-    get: {
-       title => "String",
-       description => "String",
-       full_description => "String",
-       id: "String",
-    },
-    update: {
-      id => "String",
+## Статус
 
-      object: {
-        title => "String",
-        description => "String",
-        full_description => "String",
-      }
-    },
-    delete: {
-        id => "string
-    }
-]
-
-<!-- Telegram bot -->
-Report = [
-  {
-    post: {
-      name => "Report",
-      phone_number => "string"
-    },
-  }
-]
+Проект доступен как демонстрационная frontend-реализация. Автоматические тесты в текущей версии не настроены.
